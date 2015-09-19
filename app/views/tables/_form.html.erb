@@ -1,0 +1,13 @@
+<%= form_for :table, url: {action:'create'} do |f| %>
+  <p>
+    <%= f.label ("Customer's Name:") %>
+    <%= f.text_field :customerName %>
+  </p>
+  <p>
+    <%= f.label ("Table No:") %>
+    <%= f.text_field :tableNo %>
+  </p>
+  <p>
+    <%= f.submit "Book Table" %>
+  </p>
+<% end %>

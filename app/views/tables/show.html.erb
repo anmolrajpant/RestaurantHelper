@@ -1,2 +1,12 @@
 <h1>Tables#show</h1>
 <p>Find me in app/views/tables/show.html.erb</p>
+
+<p>
+  Welcome <strong><%= @table.customerName %></strong>
+</p>
+
+<p>
+  Your table number is <strong><%= @table.tableNo %></strong>
+</p>
+
+<%= link_to 'Home', tables_path %>

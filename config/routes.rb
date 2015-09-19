@@ -1,25 +1,11 @@
 Rails.application.routes.draw do
-  get 'tables/index'
-
-  get 'tables/show'
-
-  get 'tables/new'
-
-  get 'tables/create'
-
-  get 'tables/edit'
-
-  get 'tables/update'
-
-  get 'tables/delete'
-
-  get 'tables/destroy'
+  resources :tables
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'tables#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
