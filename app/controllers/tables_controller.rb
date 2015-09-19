@@ -34,6 +34,12 @@ class TablesController < ApplicationController
   end
 
   def destroy
+    @table = Table.find(params[:id])
+    @table.destroy
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: 'Thank you for joining dinner with us. Have a nice day.' }
+      format.json { head :no_content }
+    end
   end
 
   def table_params

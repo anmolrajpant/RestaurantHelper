@@ -15,7 +15,9 @@
   			<tr>
     			<td><%= table.tableNo %></td>
     			<td><%= table.customerName %></td>
-    			<td><%= link_to 'Take order', %></td>
+    			<td><%= link_to 'Take order', new_table_order_path(table.id) %></td>
+    			<td><%= link_to 'Pay bill', table_orders_path(table.id) %></td>
+    			<td><%= link_to 'Return table', table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   			</tr>
 	</tbody>
 	
